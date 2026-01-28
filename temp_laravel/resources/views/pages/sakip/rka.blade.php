@@ -11,13 +11,14 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- Page Title -->
-            <h1 class="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-10 font-outfit uppercase tracking-wide">
+            <h1 class="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-10 font-outfit uppercase tracking-wide"
+                data-aos="fade-down">
                 Rencana Kerja Anggaran (RKA)
             </h1>
 
             <!-- Narrative Section (Glass Card) -->
-            <div
-                class="mb-10 bg-white/60 backdrop-blur-md rounded-2xl shadow-sm border border-white/50 p-6 md:p-8 relative overflow-hidden">
+            <div class="mb-10 bg-white/60 backdrop-blur-md rounded-2xl shadow-sm border border-white/50 p-6 md:p-8 relative overflow-hidden"
+                data-aos="fade-up" data-aos-delay="100">
                 <!-- Vertical Accent Bar -->
                 <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-emerald-600 mt-6 mb-6 rounded-r-lg ml-0.5 md:ml-0">
                 </div>
@@ -44,8 +45,8 @@
             </div>
 
             <!-- Elegant Data Table -->
-            <div
-                class="bg-white rounded-xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] overflow-hidden border border-slate-100">
+            <div class="bg-white rounded-xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] overflow-hidden border border-slate-100"
+                data-aos="fade-up" data-aos-delay="300">
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse">
                         <thead>

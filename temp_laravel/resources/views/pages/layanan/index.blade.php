@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="pt-24 pb-12 bg-emerald-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-down">
             <h1 class="text-4xl font-bold text-white mb-4">Layanan Kami</h1>
             <p class="text-emerald-100 text-lg">Daftar Layanan Dinas Perikanan Kabupaten Pamekasan</p>
         </div>
@@ -13,7 +13,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Maklumat Pelayanan -->
-            <div
+            <div data-aos="fade-up" data-aos-delay="100"
                 class="bg-white rounded-lg shadow-sm p-6 hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
                 <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600 mb-4">
                     <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -33,7 +33,7 @@
             </div>
 
             <!-- Inovasi Pelayanan -->
-            <div
+            <div data-aos="fade-up" data-aos-delay="200"
                 class="bg-white rounded-lg shadow-sm p-6 hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
                 <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4">
                     <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -54,7 +54,7 @@
             </div>
 
             <!-- Balai Benih -->
-            <div
+            <div data-aos="fade-up" data-aos-delay="300"
                 class="bg-white rounded-lg shadow-sm p-6 hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
                 <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center text-teal-600 mb-4">
                     <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -74,7 +74,7 @@
             </div>
 
             <!-- Rekomendasi BBM -->
-            <div
+            <div data-aos="fade-up" data-aos-delay="400"
                 class="bg-white rounded-lg shadow-sm p-6 hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
                 <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center text-yellow-600 mb-4">
                     <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -94,7 +94,7 @@
             </div>
 
             <!-- Pengaduan -->
-            <div
+            <div data-aos="fade-up" data-aos-delay="500"
                 class="bg-white rounded-lg shadow-sm p-6 hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
                 <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center text-red-600 mb-4">
                     <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

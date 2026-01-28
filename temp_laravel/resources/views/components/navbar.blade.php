@@ -1,6 +1,6 @@
 <nav x-data="{ scrolled: false, mobileMenuOpen: false, activeDropdown: null }"
     @scroll.window="scrolled = (window.pageYOffset > 20)"
-    :class="{ 'bg-white/80 backdrop-blur-lg shadow-xl border-b border-white/20': scrolled, 'bg-transparent border-b border-white/10': !scrolled }"
+    :class="{ 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-emerald-100/20': scrolled, 'bg-transparent border-b border-white/10': !scrolled }"
     class="fixed top-0 w-full z-50 transition-all duration-500 ease-in-out">
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -9,21 +9,17 @@
             <div class="flex-shrink-0 flex items-center gap-4 group cursor-pointer py-2 pl-2">
                 <a href="{{ route('home') }}" class="flex items-center gap-4">
                     <div class="relative">
-                        <div
-                            class="absolute inset-0 bg-emerald-400/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        </div>
                         <img src="{{ asset('images/logo-pamekasan.png') }}" alt="Logo Pamekasan"
-                            class="h-14 w-auto md:h-16 relative z-10 drop-shadow-lg transition-transform duration-500 group-hover:scale-110">
+                            class="h-12 w-auto md:h-14 relative z-10 drop-shadow-md transition-transform duration-500 group-hover:scale-105 mix-blend-multiply">
                     </div>
                     <div class="flex flex-col">
-                        <span
-                            class="font-outfit font-bold text-xl md:text-2xl text-slate-800 uppercase tracking-widest leading-none drop-shadow-sm group-hover:text-emerald-700 transition-colors"
-                            :class="scrolled ? 'text-slate-800' : 'text-slate-800 text-shadow-sm'">
+                        <span class="font-outfit font-bold text-xl md:text-2xl uppercase tracking-widest leading-none"
+                            :class="scrolled ? 'text-slate-800' : 'text-slate-100 text-shadow-md'">
                             DINAS PERIKANAN
                         </span>
                         <span
-                            class="font-outfit font-medium text-xs md:text-sm tracking-[0.3em] leading-none mt-1.5 uppercase transition-colors"
-                            :class="scrolled ? 'text-emerald-700' : 'text-emerald-800'">
+                            class="font-outfit font-normal text-xs md:text-sm tracking-[0.2em] leading-none mt-1 uppercase"
+                            :class="scrolled ? 'text-emerald-700' : 'text-emerald-100'">
                             Kabupaten Pamekasan
                         </span>
                     </div>
@@ -34,9 +30,9 @@
             <div class="hidden lg:flex lg:items-center lg:space-x-1">
                 @php
                     // Dynamic text color based on scroll state
-                    $navLinkClass = "relative px-4 py-3 text-sm font-bold uppercase tracking-widest transition-all duration-300 group flex items-center gap-1 overflow-hidden rounded-lg hover:bg-white/10";
+                    $navLinkClass = "relative px-6 py-4 text-sm font-bold uppercase tracking-widest transition-all duration-300 group flex items-center gap-1 overflow-hidden rounded-lg hover:bg-white/10";
                     $textClass = "text-slate-700 group-hover:text-emerald-700";
-                    $underlineClass = "absolute bottom-1 left-1/2 w-0 h-[3px] bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-300 group-hover:w-1/2 group-hover:-translate-x-1/2 rounded-full";
+                    $underlineClass = "absolute bottom-1 left-0 h-[3px] bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-300 w-0 group-hover:w-full rounded-full";
                 @endphp
 
                 <a href="{{ route('home') }}" class="{{ $navLinkClass }} {{ $textClass }}">
@@ -55,13 +51,14 @@
                         <span class="{{ $underlineClass }}"></span>
                     </button>
                     <!-- Glass Dropdown -->
+                    <!-- Glass Dropdown -->
                     <div x-show="activeDropdown === 'profil'" x-transition:enter="transition ease-out duration-300"
                         x-transition:enter-start="opacity-0 translate-y-4 scale-95"
                         x-transition:enter-end="opacity-100 translate-y-0 scale-100"
                         x-transition:leave="transition ease-in duration-200"
                         x-transition:leave-start="opacity-100 translate-y-0 scale-100"
                         x-transition:leave-end="opacity-0 translate-y-4 scale-95"
-                        class="absolute left-0 mt-2 w-72 bg-white/80 backdrop-blur-2xl rounded-2xl shadow-2xl ring-1 ring-black/5 overflow-hidden z-50 border border-white/40">
+                        class="absolute left-0 mt-2 w-72 bg-white/80 backdrop-blur-2xl rounded-2xl shadow-2xl ring-1 ring-black/5 overflow-hidden z-50 border border-white/40 origin-top-left">
                         <div class="relative p-2">
                             <!-- Decorative blurred circle -->
                             <div
@@ -139,7 +136,7 @@
                         x-transition:leave="transition ease-in duration-200"
                         x-transition:leave-start="opacity-100 translate-y-0 scale-100"
                         x-transition:leave-end="opacity-0 translate-y-4 scale-95"
-                        class="absolute left-0 mt-2 w-80 bg-white/80 backdrop-blur-2xl rounded-2xl shadow-2xl ring-1 ring-black/5 overflow-hidden z-50 border border-white/40">
+                        class="absolute left-0 mt-2 w-80 bg-white/80 backdrop-blur-2xl rounded-2xl shadow-2xl ring-1 ring-black/5 overflow-hidden z-50 border border-white/40 origin-top-left">
                         <div class="relative p-2">
                             <div
                                 class="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-400/20 rounded-full blur-2xl pointer-events-none">
@@ -188,7 +185,7 @@
                         x-transition:leave="transition ease-in duration-200"
                         x-transition:leave-start="opacity-100 translate-y-0 scale-100"
                         x-transition:leave-end="opacity-0 translate-y-4 scale-95"
-                        class="absolute left-1/2 -translate-x-1/2 mt-2 w-[600px] bg-white/90 backdrop-blur-2xl rounded-3xl shadow-2xl ring-1 ring-black/5 overflow-hidden z-50 border border-white/40">
+                        class="absolute left-1/2 -translate-x-1/2 mt-2 w-[600px] bg-white/90 backdrop-blur-2xl rounded-3xl shadow-2xl ring-1 ring-black/5 overflow-hidden z-50 border border-white/40 origin-top">
                         <div class="relative p-6">
                             <!-- Background Pattern -->
                             <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl -z-10">
@@ -331,7 +328,7 @@
                         x-transition:leave="transition ease-in duration-200"
                         x-transition:leave-start="opacity-100 translate-y-0 scale-100"
                         x-transition:leave-end="opacity-0 translate-y-4 scale-95"
-                        class="absolute left-0 mt-2 w-72 bg-white/80 backdrop-blur-2xl rounded-2xl shadow-2xl ring-1 ring-black/5 overflow-hidden z-50 border border-white/40">
+                        class="absolute left-0 mt-2 w-72 bg-white/80 backdrop-blur-2xl rounded-2xl shadow-2xl ring-1 ring-black/5 overflow-hidden z-50 border border-white/40 origin-top-left">
                         <div class="py-2">
                             <a href="{{ route('berita.index') }}"
                                 class="block px-6 py-3 text-sm text-slate-700 hover:bg-emerald-50/50 hover:text-emerald-700 transition-colors font-medium border-l-4 border-transparent hover:border-emerald-500">Berita
@@ -363,9 +360,15 @@
                 </a>
 
                 <!-- PPID Action Button (Gradient) -->
-                <div class="ml-6">
+                <div class="ml-6 relative group/ppid">
+                    <div
+                        class="absolute inset-0 bg-white/20 blur opacity-0 group-hover/ppid:opacity-100 transition-opacity duration-500 rounded-full">
+                    </div>
                     <a href="{{ route('ppid') }}" target="_blank"
-                        class="px-6 py-2 bg-gradient-to-r from-emerald-600 to-teal-700 text-white text-sm font-bold uppercase tracking-widest rounded-full shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 flex items-center gap-2 border border-white/20 group-hover:from-emerald-500 group-hover:to-teal-600 ring-2 ring-emerald-500/30">
+                        class="relative overflow-hidden px-6 py-2 bg-gradient-to-r from-emerald-600 to-teal-700 text-white text-sm font-bold uppercase tracking-widest rounded-full shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 flex items-center gap-2 border border-white/20 group-hover:from-emerald-500 group-hover:to-teal-600 ring-2 ring-emerald-500/30">
+                        <div
+                            class="absolute inset-0 -translate-x-full group-hover/ppid:animate-shine bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 z-20">
+                        </div>
                         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

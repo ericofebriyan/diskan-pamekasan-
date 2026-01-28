@@ -66,16 +66,64 @@ class PageController extends Controller
         return view('pages.sakip');
     }
 
-    public function sakipSub()
+    public function rka()
     {
-        // Placeholder for SAKIP subpages
-        return view('pages.sakip');
+        return view('pages.sakip.rka');
     }
 
-    public function informasiSub()
+    public function dpa()
     {
-        // Placeholder for Informasi subpages (can be separate views later)
-        return view('pages.layanan.index'); // Temporary fallback or create a dedicated view
+        return view('pages.sakip.dpa');
+    }
+
+    public function renstra()
+    {
+        return view('pages.sakip.renstra');
+    }
+
+    public function renja()
+    {
+        return view('pages.sakip.renja');
+    }
+
+    public function ikuiki()
+    {
+        return view('pages.sakip.iku-iki');
+    }
+
+    public function perjanjianKinerja()
+    {
+        return view('pages.sakip.perjanjian-kinerja');
+    }
+
+    public function renaksi()
+    {
+        return view('pages.sakip.renaksi');
+    }
+
+    public function lkjip()
+    {
+        return view('pages.sakip.lkjip');
+    }
+
+    public function lra()
+    {
+        return view('pages.sakip.lra');
+    }
+
+    public function informasiPermohonan()
+    {
+        return view('pages.informasi.permohonan');
+    }
+
+    public function informasiDaftarPublik()
+    {
+        return view('pages.informasi.daftar-publik');
+    }
+
+    public function informasiLowongan()
+    {
+        return view('pages.informasi.lowongan');
     }
 
     public function ppid()

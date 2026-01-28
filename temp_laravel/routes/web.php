@@ -41,22 +41,22 @@ Route::prefix('layanan')->name('layanan.')->group(function () {
 // SAKIP Routes
 Route::prefix('sakip')->name('sakip.')->group(function () {
     Route::get('/', [PageController::class, 'sakip'])->name('index'); // Index SAKIP
-    Route::get('/rka', [PageController::class, 'sakipSub'])->name('rka');
-    Route::get('/dpa', [PageController::class, 'sakipSub'])->name('dpa');
-    Route::get('/renstra', [PageController::class, 'sakipSub'])->name('renstra');
-    Route::get('/renja', [PageController::class, 'sakipSub'])->name('renja');
-    Route::get('/iku-iki', [PageController::class, 'sakipSub'])->name('ikuiki');
-    Route::get('/perjanjian-kinerja', [PageController::class, 'sakipSub'])->name('perjanjiankinerja');
-    Route::get('/renaksi', [PageController::class, 'sakipSub'])->name('renaksi');
-    Route::get('/lkjip', [PageController::class, 'sakipSub'])->name('lkjip');
-    Route::get('/lra', [PageController::class, 'sakipSub'])->name('lra');
+    Route::get('/rka', [PageController::class, 'rka'])->name('rka');
+    Route::get('/dpa', [PageController::class, 'dpa'])->name('dpa');
+    Route::get('/renstra', [PageController::class, 'renstra'])->name('renstra');
+    Route::get('/renja', [PageController::class, 'renja'])->name('renja');
+    Route::get('/iku-iki', [PageController::class, 'ikuiki'])->name('ikuiki');
+    Route::get('/perjanjian-kinerja', [PageController::class, 'perjanjianKinerja'])->name('perjanjiankinerja');
+    Route::get('/renaksi', [PageController::class, 'renaksi'])->name('renaksi');
+    Route::get('/lkjip', [PageController::class, 'lkjip'])->name('lkjip');
+    Route::get('/lra', [PageController::class, 'lra'])->name('lra');
 });
 
-// Informasi Routes (PPID moved here as a link, but handled in controller or redirect)
+// Informasi Routes
 Route::prefix('informasi')->name('informasi.')->group(function () {
-    Route::get('/permohonan', [PageController::class, 'informasiSub'])->name('permohonan');
-    Route::get('/daftar-publik', [PageController::class, 'informasiSub'])->name('daftar-publik');
-    Route::get('/lowongan', [PageController::class, 'informasiSub'])->name('lowongan');
+    Route::get('/permohonan', [PageController::class, 'informasiPermohonan'])->name('permohonan');
+    Route::get('/daftar-publik', [PageController::class, 'informasiDaftarPublik'])->name('daftar-publik');
+    Route::get('/lowongan', [PageController::class, 'informasiLowongan'])->name('lowongan');
 });
 
 Route::get('/ppid', [PageController::class, 'ppid'])->name('ppid'); // Main PPID page/link
