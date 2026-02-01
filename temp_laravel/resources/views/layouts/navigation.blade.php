@@ -14,7 +14,7 @@
                             <span class="font-bold leading-none tracking-wide text-shadow-sm text-2xl">
                                 DINAS PERIKANAN
                             </span>
-                            <span class="text-emerald-200 font-medium tracking-[0.3em] text-xs group-hover:text-white transition-colors duration-300">
+                            <span class="text-emerald-200 font-medium tracking-[0.3em] text-sm group-hover:text-white transition-colors duration-300">
                                 KAB. PAMEKASAN
                             </span>
                         </div>
@@ -139,7 +139,7 @@
 
                     @auth
                         @if(auth()->user()->usertype === 'admin')
-                             <a href="{{ route('dashboard') }}" class="px-4 py-2 text-sm font-bold text-yellow-300 hover:text-yellow-100 transition-all duration-300 hover:scale-105 ml-4 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:text-emerald-900">
+                             <a href="{{ route('dashboard') }}" class="inline-flex items-center justify-center px-4 py-2 text-sm font-bold text-yellow-300 hover:text-yellow-100 transition-all duration-300 hover:scale-105 ml-4 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:text-emerald-900">
                                 Dashboard Admin
                             </a>
                         @endif

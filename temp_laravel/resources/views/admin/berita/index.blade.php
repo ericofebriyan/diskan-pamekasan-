@@ -64,7 +64,7 @@
                                             <div class="text-xs text-emerald-600 font-medium">{{ $item->kategori ?? 'Umum' }}</div>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
-                                            {{ $item->created_at->format('d M Y') }}
+                                            {{ ($item->tanggal_berita ?? $item->created_at)->format('d M Y') }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
                                             <div class="flex justify-center items-center space-x-3">

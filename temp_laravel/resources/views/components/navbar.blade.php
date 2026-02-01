@@ -74,7 +74,7 @@
                                     class="w-1 h-8 bg-emerald-500 rounded-full mr-3 transform scale-y-0 group-hover:scale-y-100 transition-transform"></span>
                                 <div class="flex flex-col">
                                     <span class="font-bold group-hover:text-emerald-700 transition-colors">Gambaran Umum</span>
-                                    <span class="text-xs text-slate-500">Tentang Instansi</span>
+                                    <span class="text-sm text-slate-500">Tentang Instansi</span>
                                 </div>
                             </a>
                             <a href="{{ route('profil.visimisi') }}"
@@ -83,7 +83,7 @@
                                     class="w-1 h-8 bg-emerald-500 rounded-full mr-3 transform scale-y-0 group-hover:scale-y-100 transition-transform"></span>
                                 <div class="flex flex-col">
                                     <span class="font-bold group-hover:text-emerald-700 transition-colors">Visi & Misi</span>
-                                    <span class="text-xs text-slate-500">Tujuan & Cita-cita</span>
+                                    <span class="text-sm text-slate-500">Tujuan & Cita-cita</span>
                                 </div>
                             </a>
                             <a href="{{ route('profil.struktur') }}"
@@ -92,7 +92,7 @@
                                     class="w-1 h-8 bg-emerald-500 rounded-full mr-3 transform scale-y-0 group-hover:scale-y-100 transition-transform"></span>
                                 <div class="flex flex-col">
                                     <span class="font-bold group-hover:text-emerald-700 transition-colors">Struktur Organisasi</span>
-                                    <span class="text-xs text-slate-500">Bagan Susunan</span>
+                                    <span class="text-sm text-slate-500">Bagan Susunan</span>
                                 </div>
                             </a>
                             <a href="{{ route('layanan.index') }}"
@@ -101,7 +101,7 @@
                                     class="w-1 h-8 bg-emerald-500 rounded-full mr-3 transform scale-y-0 group-hover:scale-y-100 transition-transform"></span>
                                 <div class="flex flex-col">
                                     <span class="font-bold group-hover:text-emerald-700 transition-colors">Bidang Pelayanan</span>
-                                    <span class="text-xs text-slate-500">Fokus Layanan</span>
+                                    <span class="text-sm text-slate-500">Fokus Layanan</span>
                                 </div>
                             </a>
                         </div>
@@ -176,9 +176,9 @@
                             </div>
 
                             <div class="flex items-center justify-between mb-4 border-b border-slate-100 pb-2">
-                                <h3 class="text-sm font-bold text-emerald-800 uppercase tracking-widest">Akuntabilitas
+                                <h3 class="text-base font-bold text-emerald-800 uppercase tracking-widest">Akuntabilitas
                                     Kinerja</h3>
-                                <span class="text-xs text-slate-400">Transparansi Publik</span>
+                                <span class="text-sm text-slate-400">Transparansi Publik</span>
                             </div>
 
                             <div class="grid grid-cols-2 gap-x-8 gap-y-2">
@@ -449,23 +449,23 @@
                 </button>
                 <div x-show="open" x-collapse class="bg-white border-t border-slate-100 p-2 grid grid-cols-2 gap-2">
                     <a href="{{ route('sakip.rka') }}"
-                        class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">RKA</a>
+                        class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">RKA</a>
                     <a href="{{ route('sakip.dpa') }}"
-                        class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">DPA</a>
+                        class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">DPA</a>
                     <a href="{{ route('sakip.renstra') }}"
-                        class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">Renstra</a>
+                        class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">Renstra</a>
                     <a href="{{ route('sakip.renja') }}"
-                        class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">Renja</a>
+                        class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">Renja</a>
                     <a href="{{ route('sakip.ikuiki') }}"
-                        class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">IKU/IKI</a>
+                        class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">IKU/IKI</a>
                     <a href="{{ route('sakip.perjanjiankinerja') }}"
-                        class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">PK</a>
+                        class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">PK</a>
                     <a href="{{ route('sakip.renaksi') }}"
-                        class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">Renaksi</a>
+                        class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">Renaksi</a>
                     <a href="{{ route('sakip.lkjip') }}"
-                        class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">LKjIP</a>
+                        class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">LKjIP</a>
                     <a href="{{ route('sakip.lra') }}"
-                        class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">LRA</a>
+                        class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">LRA</a>
                 </div>
             </div>
 

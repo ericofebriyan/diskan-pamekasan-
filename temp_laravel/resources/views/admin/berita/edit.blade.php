@@ -34,6 +34,16 @@
                             </select>
                         </div>
 
+                        <!-- Tanggal Berita -->
+                        <div class="mb-4">
+                            <label for="tanggal_berita" class="block text-gray-700 text-sm font-bold mb-2">Tanggal Berita (Opsional)</label>
+                            <input type="date" name="tanggal_berita" id="tanggal_berita" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="{{ old('tanggal_berita', $berita->tanggal_berita ? $berita->tanggal_berita->format('Y-m-d') : '') }}">
+                            <p class="text-gray-500 text-xs mt-1">Kosongkan jika ingin menggunakan tanggal pembuatan asli.</p>
+                            @error('tanggal_berita')
+                                <p class="text-red-500 text-xs italic mt-1">{{ $message }}</p>
+                            @enderror
+                        </div>
+
                         <!-- Gambar -->
                         <div class="mb-4">
                             <label for="gambar" class="block text-gray-700 text-sm font-bold mb-2">Gambar Utama (Biarkan kosong jika tidak diubah)</label>

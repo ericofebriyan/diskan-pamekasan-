@@ -245,7 +245,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                         </div>
-                        <p class="text-xs text-slate-600 leading-relaxed italic m-0">
+                        <p class="text-sm text-slate-600 leading-relaxed italic m-0">
                             Informasi yang dikecualikan adalah informasi yang tidak dapat diakses oleh pemohon informasi publik sebagaimana diatur dalam Undang-Undang Nomor 14 Tahun 2008.
                         </p>
                     </div>

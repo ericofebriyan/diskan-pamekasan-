@@ -77,7 +77,7 @@
                                 <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="{{ $service['icon'] }}" /></svg>
                             </div>
                             <h4 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-{{ $service['color'] }}-700 relative z-10">{{ $service['title'] }}</h4>
-                            <p class="text-slate-600 text-sm leading-relaxed relative z-10">{{ $service['desc'] }}</p>
+                            <p class="text-slate-600 text-base leading-relaxed relative z-10">{{ $service['desc'] }}</p>
                         </div>
                     </a>
                 @endforeach
@@ -112,7 +112,7 @@
                                 </div>
                             @endif
                             <div class="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
-                                {{ $item->created_at->format('d M Y') }}
+                                {{ ($item->tanggal_berita ?? $item->created_at)->format('d F Y') }}
                             </div>
                         </div>
                         <div class="p-6 flex flex-col flex-grow relative">
@@ -124,7 +124,7 @@
                                     {{ $item->judul }}
                                 </a>
                             </h4>
-                            <p class="text-slate-600 text-sm line-clamp-3 mb-4 flex-grow">
+                            <p class="text-slate-600 text-base line-clamp-3 mb-4 flex-grow">
                                 {{ Str::limit(strip_tags($item->konten), 100) }}
                             </p>
                             <a href="{{ route('berita.show', $item->id) }}" class="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-800 mt-auto group-hover:translate-x-2 transition-transform duration-300">

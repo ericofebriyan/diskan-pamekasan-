@@ -37,7 +37,7 @@
                                     d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
                                 </path>
                             </svg>
-                            {{ $item->created_at->format('d M Y') }}
+                            {{ ($item->tanggal_berita ?? $item->created_at)->format('d M Y') }}
                         </div>
                         <h2
                             class="text-xl font-bold text-slate-800 mb-3 line-clamp-2 leading-tight hover:text-blue-700 transition-colors">

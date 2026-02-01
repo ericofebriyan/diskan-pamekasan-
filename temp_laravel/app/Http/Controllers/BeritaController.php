@@ -14,7 +14,7 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        $berita = Berita::latest()->paginate(9);
+        $berita = Berita::orderByRaw('COALESCE(tanggal_berita, created_at) DESC')->paginate(9);
         return view('berita.index', compact('berita'));
     }
 
@@ -23,7 +23,7 @@ class BeritaController extends Controller
      */
     public function adminIndex()
     {
-        $berita = Berita::latest()->paginate(10);
+        $berita = Berita::orderByRaw('COALESCE(tanggal_berita, created_at) DESC')->paginate(10);
         return view('admin.berita.index', compact('berita'));
     }
 
