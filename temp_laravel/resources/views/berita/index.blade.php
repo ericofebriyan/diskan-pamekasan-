@@ -3,10 +3,14 @@
 @section('title', 'Berita Terkini')
 
 @section('content')
-    <div class="mb-8 text-center sm:text-left">
-        <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl mb-2">Berita Terkini</h1>
-        <p class="text-lg text-slate-600">Informasi terbaru seputar perikanan dan kelautan di Pamekasan.</p>
+    <div class="pt-24 pb-12 bg-emerald-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold text-white mb-2 tracking-tight sm:text-4xl">Berita Terkini</h1>
+            <p class="text-emerald-100 text-lg">Informasi terbaru seputar perikanan dan kelautan di Pamekasan.</p>
+        </div>
     </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
     @if($berita->count())
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -72,4 +76,5 @@
             <p class="mt-1 text-sm text-slate-500">Berita terbaru akan muncul di sini.</p>
         </div>
     @endif
+    </div>
 @endsection

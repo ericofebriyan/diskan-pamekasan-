@@ -1,113 +1,105 @@
 @extends('layouts.app')
 
-@section('title', 'Rencana Kerja & Anggaran (RKA)')
+@section('title', 'RKA - Dinas Perikanan Pamekasan')
 
 @section('content')
-    <div class="pt-28 pb-12 min-h-screen bg-slate-50 relative overflow-hidden">
-        <!-- Background Decor (Optional Subtle) -->
-        <div class="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-emerald-50 to-transparent -z-10"></div>
-        <div class="absolute -top-10 right-0 w-96 h-96 bg-teal-100/30 rounded-full blur-3xl -z-10"></div>
+<div class="relative bg-emerald-900 pt-24 pb-32 overflow-hidden">
+    <!-- Background Patterns -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-emerald-400 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+    </div>
 
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <!-- Page Title -->
-            <h1 class="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-10 font-outfit uppercase tracking-wide">
-                Rencana Kerja Anggaran (RKA)
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center" x-data="{ show: false }" x-init="setTimeout(() => show = true, 100)">
+            <h1 x-show="show" x-transition:enter="transition ease-out duration-700"
+                x-transition:enter-start="opacity-0 transform -translate-y-8"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                class="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
+                Rencana Kerja <span class="text-emerald-400">Anggaran (RKA)</span>
             </h1>
+            <p x-show="show" x-transition:enter="transition ease-out duration-700 delay-300"
+                x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                class="text-emerald-100 text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">
+                Dokumen perencanaan yang memuat rencana kegiatan serta anggaran instansi.
+            </p>
+        </div>
+    </div>
+</div>
 
-            <!-- Narrative Section (Glass Card) -->
-            <div
-                class="mb-10 bg-white/60 backdrop-blur-md rounded-2xl shadow-sm border border-white/50 p-6 md:p-8 relative overflow-hidden">
-                <!-- Vertical Accent Bar -->
-                <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-emerald-600 mt-6 mb-6 rounded-r-lg ml-0.5 md:ml-0">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-20 pb-20">
+    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-emerald-100">
+        <div class="p-8 md:p-12">
+            <div class="prose prose-emerald lg:prose-lg max-w-none text-gray-600">
+                <p class="leading-relaxed mb-6">
+                    Rencana Kerja dan Anggaran (RKA) merupakan dokumen perencanaan yang memuat rencana kegiatan serta anggaran yang dibutuhkan untuk mendukung pelaksanaan program dan kegiatan instansi pemerintah dalam satu tahun anggaran. RKA disusun sebagai dasar dalam pengelolaan keuangan, mulai dari perencanaan, pelaksanaan, hingga pelaporan. Dokumen ini bertujuan untuk memastikan bahwa setiap kegiatan yang direncanakan dapat berjalan dengan efektif dan efisien sesuai dengan tujuan yang telah ditetapkan.
+                </p>
+                <p class="leading-relaxed mb-10">
+                    Dalam konteks Dinas Perikanan Kabupaten Pamekasan, RKA menjadi pedoman penting dalam merancang berbagai program yang berkaitan dengan pengembangan sektor perikanan, pemberdayaan nelayan, serta pengelolaan sumber daya perikanan yang berkelanjutan. Penyusunan RKA dilakukan dengan mempertimbangkan kebutuhan lokal, potensi wilayah, serta kebijakan strategis yang berlaku, sehingga diharapkan mampu memberikan dampak positif bagi masyarakat dan lingkungan sekitar.
+                </p>
+
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 m-0">Dokumen RKA Dinas Perikanan</h2>
                 </div>
 
-                <div class="pl-6 md:pl-8">
-                    <p class="text-slate-700 leading-8 text-base md:text-lg mb-6 text-justify">
-                        Rencana Kerja dan Anggaran (RKA) merupakan dokumen perencanaan yang memuat rencana kegiatan serta
-                        anggaran yang dibutuhkan untuk mendukung pelaksanaan program dan kegiatan instansi pemerintah dalam
-                        satu tahun anggaran. RKA disusun sebagai dasar dalam pengelolaan keuangan, mulai dari perencanaan,
-                        pelaksanaan, hingga pelaporan. Dokumen ini bertujuan untuk memastikan bahwa setiap kegiatan yang
-                        direncanakan dapat berjalan dengan efektif dan efisien sesuai dengan tujuan yang telah ditetapkan.
-                    </p>
-                    <p class="text-slate-700 leading-8 text-base md:text-lg text-justify">
-                        Dalam konteks Dinas Perikanan Kabupaten Pamekasan, RKA menjadi pedoman penting dalam merancang
-                        berbagai program yang berkaitan dengan pengembangan sektor perikanan, pemberdayaan nelayan, serta
-                        pengelolaan sumber daya perikanan yang berkelanjutan. Penyusunan RKA dilakukan dengan
-                        mempertimbangkan kebutuhan lokal, potensi wilayah, serta kebijakan strategis yang berlaku, sehingga
-                        diharapkan mampu memberikan dampak positif bagi masyarakat dan lingkungan sekitar.
-                    </p>
-                    <p class="text-slate-700 leading-8 text-base md:text-lg mt-6 font-medium">
-                        Berikut adalah Dokumen RKA Dinas Perikanan Kabupaten Pamekasan:
-                    </p>
-                </div>
-            </div>
-
-            <!-- Elegant Data Table -->
-            <div
-                class="bg-white rounded-xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] overflow-hidden border border-slate-100">
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-emerald-700 text-white">
-                                <th class="px-8 py-5 font-bold text-sm uppercase tracking-wider w-16 text-center">No.</th>
-                                <th class="px-8 py-5 font-bold text-sm uppercase tracking-wider w-1/4">Judul</th>
-                                <th class="px-8 py-5 font-bold text-sm uppercase tracking-wider">Uraian</th>
-                                <th class="px-8 py-5 font-bold text-sm uppercase tracking-wider w-32 text-center">Download
-                                </th>
+                <!-- Document Table -->
+                <div class="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider w-16">No.</th>
+                                <th scope="col" class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Judul</th>
+                                <th scope="col" class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Uraian</th>
+                                <th scope="col" class="px-6 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider w-32">Download</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-slate-100">
-                            <!-- Row 1 -->
-                            <tr class="hover:bg-emerald-50 transition-colors duration-300 group">
-                                <td class="px-8 py-6 text-center font-medium text-slate-500">1</td>
-                                <td class="px-8 py-6">
-                                    <span
-                                        class="font-semibold text-slate-800 text-lg group-hover:text-emerald-700 transition-colors">RKA
-                                        Tahun 2025</span>
-                                </td>
-                                <td class="px-8 py-6">
-                                    <p class="text-slate-600 leading-relaxed">Rencana Kerja Anggaran Dinas Perikanan
-                                        Kabupaten Pamekasan Tahun 2025</p>
-                                </td>
-                                <td class="px-8 py-6 text-center">
-                                    <button
-                                        class="inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-500 hover:text-white transition-all duration-300 group/btn shadow-sm hover:shadow-emerald-200">
-                                        <svg class="w-5 h-5 group-hover/btn:animate-bounce" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        <tbody class="bg-white divide-y divide-gray-100">
+                            @forelse($documents as $index => $doc)
+                            <tr class="hover:bg-emerald-50 transition-colors group">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ $index + 1 }}</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-emerald-700">{{ $doc->judul }}</td>
+                                <td class="px-6 py-4 text-sm text-gray-600">{{ $doc->deskripsi ?? '-' }}</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-center">
+                                    <a href="{{ asset('storage/' . $doc->file_path) }}" target="_blank" class="inline-flex items-center px-4 py-2 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-lg hover:bg-emerald-600 hover:text-white transition-all shadow-sm">
+                                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11v6m0 0l-3-3m3 3l3-3"></path>
                                         </svg>
-                                    </button>
+                                        PDF
+                                    </a>
                                 </td>
                             </tr>
-                            <!-- Row 2 -->
-                            <tr class="hover:bg-emerald-50 transition-colors duration-300 group">
-                                <td class="px-8 py-6 text-center font-medium text-slate-500">2</td>
-                                <td class="px-8 py-6">
-                                    <span
-                                        class="font-semibold text-slate-800 text-lg group-hover:text-emerald-700 transition-colors">RKA
-                                        Tahun 2024</span>
-                                </td>
-                                <td class="px-8 py-6">
-                                    <p class="text-slate-600 leading-relaxed">Rencana Kerja Anggaran Dinas Perikanan
-                                        Kabupaten Pamekasan Tahun 2024</p>
-                                </td>
-                                <td class="px-8 py-6 text-center">
-                                    <button
-                                        class="inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-500 hover:text-white transition-all duration-300 group/btn shadow-sm hover:shadow-emerald-200">
-                                        <svg class="w-5 h-5 group-hover/btn:animate-bounce" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                                        </svg>
-                                    </button>
-                                </td>
+                            @empty
+                            <tr>
+                                <td colspan="4" class="px-6 py-10 text-center text-gray-500 italic">Belum ada dokumen RKA yang tersedia.</td>
                             </tr>
+                            @endforelse
                         </tbody>
                     </table>
+                </div>
+
+                <!-- Info Alert -->
+                <div class="mt-10 bg-blue-50 border-l-4 border-blue-400 p-6 rounded-xl">
+                    <div class="flex items-start gap-4">
+                        <div class="text-blue-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-blue-700 text-sm font-medium">
+                                Klik tombol <strong>PDF</strong> pada tabel di atas untuk mengunduh dokumen resmi RKA. Dokumen ini disediakan secara publik untuk transparansi penggunaan anggaran daerah.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 @endsection

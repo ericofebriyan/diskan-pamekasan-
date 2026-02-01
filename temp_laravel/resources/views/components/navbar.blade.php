@@ -68,24 +68,13 @@
                                 class="absolute -top-10 -right-10 w-24 h-24 bg-emerald-400/20 rounded-full blur-2xl pointer-events-none">
                             </div>
 
-                            <a href="{{ route('profil.kepaladinas') }}"
+                            <a href="{{ route('profil.gambaranumum') }}"
                                 class="group flex items-center px-4 py-3 text-sm text-slate-700 hover:bg-emerald-50/80 rounded-xl transition-all mb-1">
                                 <span
                                     class="w-1 h-8 bg-emerald-500 rounded-full mr-3 transform scale-y-0 group-hover:scale-y-100 transition-transform"></span>
                                 <div class="flex flex-col">
-                                    <span class="font-bold group-hover:text-emerald-700 transition-colors">Kepala
-                                        Dinas</span>
-                                    <span class="text-xs text-slate-500">Profil Pimpinan</span>
-                                </div>
-                            </a>
-                            <a href="{{ route('profil.sejarah') }}"
-                                class="group flex items-center px-4 py-3 text-sm text-slate-700 hover:bg-emerald-50/80 rounded-xl transition-all mb-1">
-                                <span
-                                    class="w-1 h-8 bg-emerald-500 rounded-full mr-3 transform scale-y-0 group-hover:scale-y-100 transition-transform"></span>
-                                <div class="flex flex-col">
-                                    <span
-                                        class="font-bold group-hover:text-emerald-700 transition-colors">Sejarah</span>
-                                    <span class="text-xs text-slate-500">Perjalanan Instansi</span>
+                                    <span class="font-bold group-hover:text-emerald-700 transition-colors">Gambaran Umum</span>
+                                    <span class="text-xs text-slate-500">Tentang Instansi</span>
                                 </div>
                             </a>
                             <a href="{{ route('profil.visimisi') }}"
@@ -93,8 +82,7 @@
                                 <span
                                     class="w-1 h-8 bg-emerald-500 rounded-full mr-3 transform scale-y-0 group-hover:scale-y-100 transition-transform"></span>
                                 <div class="flex flex-col">
-                                    <span class="font-bold group-hover:text-emerald-700 transition-colors">Visi
-                                        Misi</span>
+                                    <span class="font-bold group-hover:text-emerald-700 transition-colors">Visi & Misi</span>
                                     <span class="text-xs text-slate-500">Tujuan & Cita-cita</span>
                                 </div>
                             </a>
@@ -103,19 +91,17 @@
                                 <span
                                     class="w-1 h-8 bg-emerald-500 rounded-full mr-3 transform scale-y-0 group-hover:scale-y-100 transition-transform"></span>
                                 <div class="flex flex-col">
-                                    <span class="font-bold group-hover:text-emerald-700 transition-colors">Struktur
-                                        Organisasi</span>
+                                    <span class="font-bold group-hover:text-emerald-700 transition-colors">Struktur Organisasi</span>
                                     <span class="text-xs text-slate-500">Bagan Susunan</span>
                                 </div>
                             </a>
-                            <a href="{{ route('profil.tupoksi') }}"
+                            <a href="{{ route('layanan.index') }}"
                                 class="group flex items-center px-4 py-3 text-sm text-slate-700 hover:bg-emerald-50/80 rounded-xl transition-all">
                                 <span
                                     class="w-1 h-8 bg-emerald-500 rounded-full mr-3 transform scale-y-0 group-hover:scale-y-100 transition-transform"></span>
                                 <div class="flex flex-col">
-                                    <span
-                                        class="font-bold group-hover:text-emerald-700 transition-colors">Tupoksi</span>
-                                    <span class="text-xs text-slate-500">Tugas & Fungsi</span>
+                                    <span class="font-bold group-hover:text-emerald-700 transition-colors">Bidang Pelayanan</span>
+                                    <span class="text-xs text-slate-500">Fokus Layanan</span>
                                 </div>
                             </a>
                         </div>
@@ -145,11 +131,6 @@
                                 class="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-400/20 rounded-full blur-2xl pointer-events-none">
                             </div>
 
-                            <a href="{{ route('layanan.index') }}"
-                                class="block px-4 py-3 bg-emerald-50/50 rounded-xl text-sm font-bold text-emerald-800 hover:bg-emerald-100/80 transition-colors mb-2 text-center border border-emerald-100">
-                                LIHAT SEMUA LAYANAN
-                            </a>
-                            <div class="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent my-2"></div>
 
                             <div class="grid grid-cols-1 gap-1">
                                 <a href="{{ route('layanan.maklumat') }}"
@@ -416,14 +397,14 @@
                     </svg>
                 </button>
                 <div x-show="open" x-collapse class="bg-white border-t border-slate-100 p-2 space-y-1">
-                    <a href="{{ route('profil.kepaladinas') }}"
-                        class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50">Kepala
-                        Dinas</a>
-                    <a href="{{ route('profil.sejarah') }}"
-                        class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50">Sejarah</a>
+                    <a href="{{ route('profil.gambaranumum') }}"
+                        class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50">Gambaran Umum</a>
                     <a href="{{ route('profil.visimisi') }}"
-                        class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50">Visi
-                        Misi</a>
+                        class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50">Visi & Misi</a>
+                    <a href="{{ route('profil.struktur') }}"
+                        class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50">Struktur Organisasi</a>
+                    <a href="{{ route('layanan.index') }}"
+                        class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50">Bidang Pelayanan</a>
                 </div>
             </div>
 
@@ -438,12 +419,18 @@
                     </svg>
                 </button>
                 <div x-show="open" x-collapse class="bg-white border-t border-slate-100 p-2 space-y-1">
-                    <a href="{{ route('layanan.index') }}"
-                        class="block px-4 py-3 rounded-xl text-sm font-bold text-emerald-700 bg-emerald-50/50">Semua
-                        Layanan</a>
                     <a href="{{ route('layanan.maklumat') }}"
                         class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50">Maklumat
                         Pelayanan</a>
+                    <a href="{{ route('layanan.inovasi') }}"
+                        class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50">Inovasi
+                        Pelayanan</a>
+                    <a href="{{ route('layanan.balaibenih') }}"
+                        class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50">Balai
+                        Benih Ikan</a>
+                    <a href="{{ route('layanan.rekomendasibbm') }}"
+                        class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50">Rekomendasi
+                        BBM</a>
                     <a href="{{ route('layanan.pengaduan') }}"
                         class="block px-4 py-3 rounded-xl text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50">Pengaduan
                         Online</a>
@@ -477,6 +464,8 @@
                         class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">Renaksi</a>
                     <a href="{{ route('sakip.lkjip') }}"
                         class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">LKjIP</a>
+                    <a href="{{ route('sakip.lra') }}"
+                        class="block px-3 py-2 rounded-lg text-xs font-medium text-slate-600 bg-slate-50 border border-slate-100 text-center">LRA</a>
                 </div>
             </div>
 

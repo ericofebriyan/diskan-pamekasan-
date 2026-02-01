@@ -3,20 +3,12 @@
 @section('title', $berita->judul)
 
 @section('content')
-    <div class="max-w-4xl mx-auto">
-        <div class="mb-6">
-            <a href="{{ route('berita.index') }}"
-                class="inline-flex items-center text-slate-500 hover:text-blue-700 transition-colors mb-4">
-                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18">
-                    </path>
-                </svg>
-                Kembali ke Berita
-            </a>
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight mb-4">
+    <div class="pt-24 pb-12 bg-emerald-700 mb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+             <h1 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-4">
                 {{ $berita->judul }}
             </h1>
-            <div class="flex items-center text-slate-500 text-sm space-x-4">
+            <div class="flex items-center justify-center text-emerald-100 text-sm space-x-4">
                 <span class="flex items-center">
                     <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -25,21 +17,33 @@
                     </svg>
                     {{ $berita->created_at->format('d F Y') }}
                 </span>
-                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                <span class="bg-white/20 text-white text-xs font-semibold px-2.5 py-0.5 rounded backdrop-blur-sm">
                     {{ $berita->kategori }}
                 </span>
             </div>
         </div>
+    </div>
 
-        @if($berita->gambar)
-            <div class="rounded-xl overflow-hidden shadow-sm mb-8">
-                <img src="{{ asset('storage/' . $berita->gambar) }}" alt="{{ $berita->judul }}"
-                    class="w-full h-auto object-cover">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <div class="mb-8">
+            <a href="{{ route('berita.index') }}"
+                class="inline-flex items-center text-slate-500 hover:text-emerald-700 transition-all group mb-6">
+                <svg class="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                <span class="font-medium">Kembali ke Berita</span>
+            </a>
+
+            @if($berita->gambar)
+                <div class="rounded-2xl overflow-hidden shadow-2xl mb-10 max-w-3xl mx-auto border-4 border-white">
+                    <img src="{{ asset('storage/' . $berita->gambar) }}" alt="{{ $berita->judul }}"
+                        class="w-full h-[400px] object-cover object-center">
+                </div>
+            @endif
+
+            <div class="prose prose-slate lg:prose-xl max-w-none text-slate-700 leading-relaxed">
+                {!! nl2br(e($berita->konten)) !!}
             </div>
-        @endif
-
-        <div class="prose prose-slate lg:prose-lg max-w-none text-slate-800 leading-relaxed">
-            {!! nl2br(e($berita->konten)) !!}
         </div>
     </div>
 @endsection

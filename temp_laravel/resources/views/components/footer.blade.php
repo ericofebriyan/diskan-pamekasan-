@@ -135,7 +135,7 @@
 
         <div
             class="border-t border-white/10 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
-            <p>&copy; 2024 Dinas Perikanan Kabupaten Pamekasan. All rights reserved.</p>
+            <p>&copy; {{ date('Y') }} {{ config('app.name') }}. All rights reserved.</p>
             <div class="flex gap-6 mt-4 md:mt-0 font-medium">
                 <a href="#" class="hover:text-emerald-400 transition-colors">Privacy Policy</a>
                 <a href="#" class="hover:text-emerald-400 transition-colors">Terms of Service</a>
